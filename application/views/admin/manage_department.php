@@ -65,7 +65,7 @@
 
 			</div>
 
-            <?php endif;?>
+            <?php T_ENDIF;?>
 
             <!----EDITING FORM ENDS--->
 

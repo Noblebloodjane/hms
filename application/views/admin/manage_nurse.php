@@ -76,13 +76,13 @@
 
                     <?php echo form_close();?>
 
-                    <?php endforeach;?>
+                    <?php T_ENDFOREACH;?>
 
-                </div>
+</div>
 
-			</div>
+</div>
 
-            <?php endif;?>
+<?php T_ENDIF;?>
 
             <!----EDITING FORM ENDS--->
 

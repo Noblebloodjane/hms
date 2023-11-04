@@ -1,8 +1,8 @@
 <div class="navbar navbar-top navbar-inverse">
 
-	<div class="navbar-inner">
+	<div class="navbar-inner" style="background-color: #9CCB86;border-bottom: 1px solid #9CCB86;">
 
-		<div class="container-fluid">
+		<div class="container-fluid" >
 
 			<a class="brand" href="<?php echo base_url();?>"><?php echo $system_name;?>
 

@@ -1,15 +1,41 @@
 <div class="box">
 
-<div class="box-header">
-      <!------CONTROL TABS START------->
-</div>
-
-	<div class="tab-pane box active" id="edit" style="padding: 5px"><div class="box-content">
-	  <div class="padded">
+<div class="box">
+	<div class="box-header">
+    
+    	<!------CONTROL TABS START------->
+		<ul class="nav nav-tabs nav-tabs-left">
+        	<?php if(isset($edit_profile)):?>
+			<li class="active">
+            	<a href="#edit" data-toggle="tab"><i class="icon-wrench"></i> 
+					<?php echo ('Edit Patient');?>
+                    	</a></li>
+            <?php endif;?>
+			<li class="<?php if(!isset($edit_profile))echo 'active';?>">
+            	<a href="#list" data-toggle="tab"><i class="icon-align-justify"></i> 
+					<?php echo ('Patient List');?>
+                    	</a></li>
+			<li>
+            	<a href="#add" data-toggle="tab"><i class="icon-plus"></i>
+					<?php echo ('Add Patient');?>
+                    	</a></li>
+		</ul>
+    	<!------CONTROL TABS END------->
+        
+	</div>
+	<div class="box-content padded">
+		<div class="tab-content">
+        	<!----EDITING FORM STARTS---->
+        	<?php if(isset($edit_profile)):?>
+			<div class="tab-pane box active" id="edit" style="padding: 5px">
+                <div class="box-content">
+                	<?php foreach($edit_profile as $row):?>
+                    <?php echo form_open('admin/manage_patient/edit/do_update/'.$row['patient_id'] , array('class' => 'form-horizontal validatable'));?>
+	                  <div class="padded">
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('name');?></label>
+                                <label class="control-label"><?php echo ('Name');?></label>
 
                                 <div class="controls">
 
@@ -21,7 +47,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('email');?></label>
+                                <label class="control-label"><?php echo ('Email');?></label>
 
                                 <div class="controls">
 
@@ -33,7 +59,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('password');?></label>
+                                <label class="control-label"><?php echo ('Password');?></label>
 
                                 <div class="controls">
 
@@ -45,7 +71,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('address');?></label>
+                                <label class="control-label"><?php echo ('Address');?></label>
 
                                 <div class="controls">
 
@@ -57,7 +83,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('phone');?></label>
+                                <label class="control-label"><?php echo ('Phone');?></label>
 
                                 <div class="controls">
 
@@ -69,15 +95,15 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('sex');?></label>
+                                <label class="control-label"><?php echo ('Sex');?></label>
 
                                 <div class="controls">
 
                                     <select name="sex" class="uniform" style="width:100%;">
 
-                                    	<option value="male" <?php if($row['sex']=='male')echo 'selected';?>><?php echo get_phrase('male');?></option>
+                                    	<option value="male" <?php if($row['sex']=='male')echo 'selected';?>><?php echo ('Male');?></option>
 
-                                    	<option value="female" <?php if($row['sex']=='female')echo 'selected';?>><?php echo get_phrase('female');?></option>
+                                    	<option value="female" <?php if($row['sex']=='female')echo 'selected';?>><?php echo ('Female');?></option>
 
                                     </select>
 
@@ -87,7 +113,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('birth_date');?></label>
+                                <label class="control-label"><?php echo ('Birth Date');?></label>
 
                                 <div class="controls">
 
@@ -99,7 +125,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('age');?></label>
+                                <label class="control-label"><?php echo ('Age');?></label>
 
                                 <div class="controls">
 
@@ -111,7 +137,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('blood_group');?></label>
+                                <label class="control-label"><?php echo ('Blood Group');?></label>
 
                                 <div class="controls">
 
@@ -143,7 +169,7 @@
 
                         <div class="form-actions">
 
-                            <button type="submit" class="btn btn-blue"><?php echo get_phrase('edit_patient');?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo ('Edit Patient');?></button>
 
                         </div>
 
@@ -167,7 +193,7 @@
 
 				
 
-                <table cellpadding="0" cellspacing="0" border="0" class="dTable responsive">
+                <table cellpadding="0" cellspacing="0" border="0" class="dTable responsive table-hover">
 
                 	<thead>
 
@@ -175,17 +201,17 @@
 
                     		<th><div>#</div></th>
 
-                    		<th><div><?php echo get_phrase('patient_name');?></div></th>
+                    		<th><div><?php echo ('Patient Name');?></div></th>
 
-                    		<th><div><?php echo get_phrase('age');?></div></th>
+                    		<th><div><?php echo ('Age');?></div></th>
 
-                    		<th><div><?php echo get_phrase('sex');?></div></th>
+                    		<th><div><?php echo ('Sex');?></div></th>
 
-                    		<th><div><?php echo get_phrase('blood_group');?></div></th>
+                    		<th><div><?php echo ('Blood Group');?></div></th>
 
-                    		<th><div><?php echo get_phrase('birth_date');?></div></th>
+                    		<th><div><?php echo ('Birth Date');?></div></th>
 
-                    		<th><div><?php echo get_phrase('options');?></div></th>
+                    		<th><div><?php echo ('Options');?></div></th>
 
 						</tr>
 
@@ -213,7 +239,7 @@
 
                             	<a href="<?php echo base_url();?>index.php?admin/manage_patient/edit/<?php echo $row['patient_id'];?>"
 
-                                	rel="tooltip" data-placement="top" data-original-title="<?php echo get_phrase('edit');?>" class="btn btn-blue">
+                                	rel="tooltip" data-placement="top" data-original-title="<?php echo ('Edit');?>" class="btn btn-primary">
 
                                 		<i class="icon-wrench"></i>
 
@@ -221,7 +247,7 @@
 
                             	<a href="<?php echo base_url();?>index.php?admin/manage_patient/delete/<?php echo $row['patient_id'];?>" onclick="return confirm('delete?')"
 
-                                	rel="tooltip" data-placement="top" data-original-title="<?php echo get_phrase('delete');?>" class="btn btn-red">
+                                	rel="tooltip" data-placement="top" data-original-title="<?php echo ('Delete');?>" class="btn btn-danger">
 
                                 		<i class="icon-trash"></i>
 
@@ -259,7 +285,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('name');?></label>
+                                <label class="control-label"><?php echo ('Name');?></label>
 
                                 <div class="controls">
 
@@ -271,7 +297,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('email');?></label>
+                                <label class="control-label"><?php echo ('Email');?></label>
 
                                 <div class="controls">
 
@@ -283,7 +309,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('password');?></label>
+                                <label class="control-label"><?php echo ('Password');?></label>
 
                                 <div class="controls">
 
@@ -295,7 +321,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('address');?></label>
+                                <label class="control-label"><?php echo ('Address');?></label>
 
                                 <div class="controls">
 
@@ -307,7 +333,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('phone');?></label>
+                                <label class="control-label"><?php echo ('Phone');?></label>
 
                                 <div class="controls">
 
@@ -319,15 +345,15 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('sex');?></label>
+                                <label class="control-label"><?php echo ('Sex');?></label>
 
                                 <div class="controls">
 
                                     <select name="sex" class="uniform" style="width:100%;">
 
-                                    	<option value="male"><?php echo get_phrase('male');?></option>
+                                    	<option value="male"><?php echo ('Male');?></option>
 
-                                    	<option value="female"><?php echo get_phrase('female');?></option>
+                                    	<option value="female"><?php echo ('Female');?></option>
 
                                     </select>
 
@@ -337,7 +363,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('birth_date');?></label>
+                                <label class="control-label"><?php echo ('Birth Date');?></label>
 
                                 <div class="controls">
 
@@ -349,7 +375,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('age');?></label>
+                                <label class="control-label"><?php echo ('Age');?></label>
 
                                 <div class="controls">
 
@@ -361,7 +387,7 @@
 
                             <div class="control-group">
 
-                                <label class="control-label"><?php echo get_phrase('blood_group');?></label>
+                                <label class="control-label"><?php echo ('Blood Group');?></label>
 
                                 <div class="controls">
 
@@ -393,7 +419,7 @@
 
                         <div class="form-actions">
 
-                            <button type="submit" class="btn btn-blue"><?php echo get_phrase('add_patient');?></button>
+                            <button type="submit" class="btn btn-success"><?php echo ('Add Patient');?></button>
 
                         </div>
 

@@ -5,7 +5,24 @@
     
 
     	<!------CONTROL TABS START------->
-    	<!------CONTROL TABS END-------> Buy for just 20uesd
+        <!------CONTROL TABS START------->
+		<ul class="nav nav-tabs nav-tabs-left">
+        	<?php if(isset($edit_profile)):?>
+			<li class="active">
+            	<a href="#edit" data-toggle="tab"><i class="icon-wrench"></i> 
+					<?php echo ('Edit Department');?>
+                    	</a></li>
+            <?php endif;?>
+			<li class="<?php if(!isset($edit_profile))echo 'active';?>">
+            	<a href="#list" data-toggle="tab"><i class="icon-align-justify"></i> 
+					<?php echo ('View Department List');?>
+                    	</a></li>
+			<li>
+            	<a href="#add" data-toggle="tab"><i class="icon-plus"></i>
+					<?php echo ('Add Department');?>
+                    	</a></li>
+		</ul>
+    	<!-----i edited here-CONTROL TABS END------->
 </div>
 
 	<div class="box-content padded">

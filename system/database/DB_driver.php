@@ -30,8 +30,8 @@
  */
 class CI_DB_driver {
 
-	var $username='root';
-	var $password='';
+	var $username='onlikuya_hms';
+	var $password='oeshms123';
 	var $hostname='localhost';
 	var $database= 'hms';
 	var $dbdriver		= 'mysql';

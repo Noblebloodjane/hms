@@ -402,29 +402,26 @@ class Patient extends CI_Controller
 	}
 
 	
-	/******VIEW COMPLAINT FORM*****/
+	/******make COMPLAINT FORM*****/
 	function make_complaints($param1 = '', $param2 = '', $param3 = '')
-
 	{
-
-		if ($this->session->userdata('patient_login') != 1)
-
+		if ($this->session->userdata('patient_login') != 1) {
 			redirect(base_url() . 'index.php?login', 'refresh');
-
-		
-
-		$page_data['make_complaints']  = 'make_complaints';
-
-		$page_data['make_complaints'] = get_phrase('make_complaints');
-
-		// $page_data['doctors']    = $this->db->get('doctor')->result_array();
-
-		
-
+		}
+	
+		$page_data['page_name'] = 'make_complaints';
+		$page_data['page_title'] = get_phrase('make_complaints');
+	
+		if ($this->input->post('complaint_submitted') == 1) {
+			// Form has been submitted, so insert the complaint and set the flash message
+			$data['name'] = $this->session->userdata('name'); // Replace with actual form data
+			$this->db->insert('complaints', $data);
+			$this->session->set_flashdata('flash_message', get_phrase('complaint_inserted'));
+		}
+	
+		// Load the view on the same page
 		$this->load->view('index', $page_data);
-
 	}
-
 
 	/******VIEW OPERATION HISTORY*****/
 

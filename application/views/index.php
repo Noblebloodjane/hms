@@ -15,7 +15,7 @@
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
 		<?php include 'includes.php';?>
-
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <title><?php echo $page_title;?> | <?php echo $system_title;?></title>
 
     </head>

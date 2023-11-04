@@ -136,21 +136,6 @@
 
 		</li>
 
-		        <!------make complaints----->
-
-				<li class="<?php if($page_name == 'view_admit_history')echo 'dark-nav active';?>">
-
-<span class="glow"></span>
-
-	<a href="<?php echo base_url();?>index.php?patient/view_admit_history" >
-
-		<i class="icon-hdd icon-2x"></i>
-
-		<span><?php echo get_phrase('admit_history');?></span>
-
-	</a>
-
-</li>
 
 		<!------manage report--->
 
@@ -206,7 +191,7 @@
 
 		<!------make complaints--->
 
-		<li class="<?php if($page_name == 'payment_history')echo 'dark-nav active';?>">
+		<li class="<?php if($page_name == 'make_complain')echo 'dark-nav active';?>">
 
 			<span class="glow"></span>
 

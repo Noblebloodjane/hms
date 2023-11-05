@@ -223,6 +223,15 @@
                   </a>
 
                 </li>
+				<li class="<?php if($page_name == 'view_complains')echo 'active';?>">
+
+<a href="<?php echo base_url();?>index.php?admin/view_complains">
+
+<i class="icon-comment"></i><?php echo get_phrase('view_complains');?>
+
+</a>
+
+</li>
 
                 <li class="<?php if($page_name == 'view_payment')echo 'active';?>">
 

@@ -15,9 +15,189 @@
 		<?php include 'includes.php';?>
 
         <title><?php echo get_phrase('login');?> | <?php echo $system_title;?></title>
+        <style>
+            style.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.left-container{
+  width: 400px;
+    position: relative;
+    top: 198px;
+    height: 299px;
+    background-color: #008080;
+    padding: 20px;
+    margin-left: 320px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.left-container h3{
+  color: #f4f4f4;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  padding-top: 120px;  
+}
+
+.login-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 34px;
+    margin-top: -140px;
+    margin-left:760px ;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #008080;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    width: 150px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #008080;
+    background-color: #008080;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+  }
+  
+  .welcome-back, .login-form {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-back {
+    flex-basis: 50%;
+    text-align: center;
+  }
+  
+  .welcome-back h1 {
+    margin-bottom: 0;
+  }
+  
+  .welcome-back p {
+    margin-top: 5px;
+  }
+  
+  .login-form {
+    flex-basis: 30%;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+  }
+  
+  .input-group input[type="email"],
+  .input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .input-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2F80ED;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    text-align: center;
+    
+  }
+  
+  .forgot-password a {
+    padding-top: 20px;
+    color: #2F80ED;
+    text-decoration: none;
+  }
+
+        </style>
 
     </head>
-
+<!-- 
 	<body>
 
 		<?php if($this->session->flashdata('flash_message') != ""):?>
@@ -132,9 +312,7 @@
 
                         	<?php echo form_open('login' , array('class' => 'separate-sections'));?>
 
-                                <div class="">
-
-                                    
+                                <div class="">       
 
                                     <select class="validate[required]" name="login_type" style="width:100%;">
 
@@ -155,8 +333,6 @@
                                         <option value="accountant"><?php echo get_phrase('accountant');?></option>
 
                                     </select>
-
-    
 
                                 </div>
 
@@ -278,6 +454,38 @@
 
         
 
-	</body>
+        
 
-</html>
+	</body> -->
+
+    <div class="modal-body">
+
+<?php echo form_open('login/reset_password');?>
+
+    <select class="validate[required]" name="account_type"  style="margin-bottom: 0px !important;">
+
+        <option value=""><?php echo get_phrase('account_type');?></option>
+
+        <option value="admin"><?php echo get_phrase('admin');?></option>
+
+        <option value="doctor"><?php echo get_phrase('doctor');?></option>
+
+        <option value="patient"><?php echo get_phrase('patient');?></option>
+
+        <option value="nurse"><?php echo get_phrase('nurse');?></option>
+
+        <option value="pharmacist"><?php echo get_phrase('pharmacist');?></option>
+
+        <option value="laboratorist"><?php echo get_phrase('laboratorist');?></option>
+
+        <option value="accountant"><?php echo get_phrase('accountant');?></option>
+
+    </select>
+
+    <input type="email" name="email"  placeholder="<?php echo get_phrase('email');?>"  style="margin-bottom: 0px !important;"/>
+
+    <input type="submit" value="<?php echo get_phrase('reset');?>"  class="btn btn-blue btn-medium"/>
+
+<?php echo form_close();?>
+
+</div>

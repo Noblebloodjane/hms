@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("hospital.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sections styles */
+section {
+    background-color: #fff;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials styles */
+blockquote {
+    padding: 1rem;
+    border-left: 3px solid #007BFF;
+    margin: 1rem 0;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote footer {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Button styles */
+.login-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+/* Social links styles */
+.social-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+/* Responsive styles (for smaller screens) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+

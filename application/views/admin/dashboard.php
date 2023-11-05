@@ -235,9 +235,24 @@
                         </a>
 
                     </div>
+                    
 
                 </div>
+                
+                <div class="row-fluid">
 
+                    <div class="span2 action-nav-button">
+
+                        <a href="<?php echo base_url();?>index.php?admin/view_complains">
+
+                        <i class="icon-comment"></i>
+
+                        <span><?php echo get_phrase('view_complains');?></span>
+
+                        </a>
+
+                    </div>
+                    
             </div>
 
         </div>

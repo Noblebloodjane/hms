@@ -1,8 +1,8 @@
 <div class="navbar navbar-top navbar-inverse">
 
-	<div class="navbar-inner" style="background-color: #9CCB86;border-bottom: 1px solid #9CCB86;">
+	<div class="navbar-inner" style="background-color: #008080;border-bottom: 1px solid darkblue;">
 
-		<div class="container-fluid" >
+		<div class="container-fluid"style="background-color: #008080 >
 
 			<a class="brand" href="<?php echo base_url();?>"><?php echo $system_name;?>
 
@@ -10,7 +10,7 @@
 
 			<!-- the new toggle buttons -->
 
-			<ul class="nav pull-right">
+			<ul class="nav pull-right" style="background-color: #008080>
 
 				<li class="toggle-primary-sidebar hidden-desktop" data-toggle="collapse" data-target=".nav-collapse-primary"><button type="button" class="btn btn-navbar"><i class="icon-th-list"></i></button></li>
 

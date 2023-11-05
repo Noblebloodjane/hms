@@ -414,14 +414,36 @@ class Patient extends CI_Controller
 	
 		if ($this->input->post('complaint_submitted') == 1) {
 			// Form has been submitted, so insert the complaint and set the flash message
-			$data['name'] = $this->session->userdata('name'); // Replace with actual form data
+	
+			// Fetch the submitted data from the form
+			$staff_name = $this->input->post('staff_name');
+			$profession = $this->input->post('staff_profession');
+			$staff_id = $this->input->post('staff_id');
+			$complaint_text = $this->input->post('complaint_text');
+	
+			// You can also fetch the patient's name here if needed
+			$patient_id = $this->session->userdata('patient_id');
+			$patient_data = $this->db->get_where('patient', array('patient_id' => $patient_id))->row();
+	
+			// Create an array with the complaint data
+			$data = array(
+				'name' => $patient_data->name, // Assuming you need the patient's name
+				'staff_reported' => $staff_name,
+				'staff_profession' => $profession,
+				'staff_id' => $staff_id,
+				'complaint' => $complaint_text,
+				'date_of_complaint' => date('Y-m-d H:i:s'), // Current date and time
+			);
+	
+			// Insert the data into the complaints table
 			$this->db->insert('complaints', $data);
-			$this->session->set_flashdata('flash_message', get_phrase('complaint_inserted'));
 		}
 	
 		// Load the view on the same page
 		$this->load->view('index', $page_data);
 	}
+	
+	
 
 	/******VIEW OPERATION HISTORY*****/
 

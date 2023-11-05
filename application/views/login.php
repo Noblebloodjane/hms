@@ -16,6 +16,7 @@
 
         <title><?php echo get_phrase('login');?> | <?php echo $system_title;?></title>
 
+  
     </head>
 
 	<body>
@@ -36,7 +37,7 @@
 
         <div class="navbar navbar-top navbar-inverse ">
 
-            <div class="navbar-inner" style="background-color: #9CCB86;border-bottom: 1px solid #9CCB86;">
+            <div class="navbar-inner" style="background-color: #008080;border-bottom: 1px solid dark blue;">
 
                 <div class="container-fluid">
 
@@ -186,7 +187,7 @@
 
                                 <div>
 
-                                    <button type="submit" class="btn btn-blue btn-block"style="background-color: #005566;border: solid #005566" >
+                                    <button type="submit" class="btn btn-blue btn-block"style="background-color: #008080;border: solid #008080" >
 
                                         <?php echo get_phrase('login');?>
 

@@ -1,12 +1,12 @@
 <div class="sidebar-background">
 
-	<div class="primary-sidebar-background">
+	<div class="primary-sidebar-background" >
 
 	</div>
 
 </div>
 
-<div class="primary-sidebar">
+<div class="primary-sidebar" style="background-color: #008080">
 
 	<!-- Main nav -->
 

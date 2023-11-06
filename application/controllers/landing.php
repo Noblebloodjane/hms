@@ -7,4 +7,14 @@ class Landing extends CI_Controller {
     {
         $this->load->view('landing');
     }
+
+    public function privacy()
+    {
+        $this->load->view('privacy');
+    }
+
+    public function terms()
+    {
+        $this->load->view('terms');
+    }
 }

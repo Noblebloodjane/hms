@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="template/css/styles.css">
+<title>Hospital Management System</title>
 </head>
 <body>
     <header>
         <h1>Hospital Management System</h1>
-        <img src="hospital2.jpg" alt="Hospital Management System Image">
+        <img src="template/images/hospital2.jpg" alt="Hospital Management System Image">
+
     </header>
     
     <section class="features">
@@ -51,7 +52,7 @@
     <section class="get-started">
         <h2>Get Started Today!</h2>
         <p>Ready to take your hospital to the next level? Contact us to schedule a demo and see how our Hospital Management System can transform your operations.</p>
-        <a href="login.html" class="login-button">Login</a>
+        <a href="<?php echo base_url();?>index.php?login/logout" class="login-button">login</a>
     </section>
     
     <section class="about-us">
@@ -71,8 +72,8 @@
     
     <footer>
         <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
+        <li><?php echo anchor('landing/privacy', 'Privacy Policy'); ?></li>
+        <li><?php echo anchor('landing/terms', 'terms and conditions'); ?></li>
         </ul>
         <p>&copy; 2023 Your Hospital Management System</p>
     </footer>

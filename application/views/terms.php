@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template/css/terms.css">
+    <title>Terms of Service for Hospital Management System</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Terms of Service for Hospital Management System</h1>
+     <h2>Introduction</h2>
+    <p>By using our Hospital Management System, you are agreeing to these terms. Please read them carefully.</p>
+     <h2>Use of the System</h2>
+    <p>The system is intended for use by authorized personnel only. Unauthorized access or use may result in legal action.</p>
+     <h2>User Responsibilities</h2>
+    <p>Users are responsible for maintaining the confidentiality of their login credentials. Any activities under a user's account will be the responsibility of the user.</p>
+     <h2>System Availability</h2>
+    <p>While we strive to keep the system available at all times, there may be occasions when the system will be unavailable due to maintenance or other reasons.</p>
+     <h2>Data Integrity</h2>
+    <p>We take reasonable steps to ensure the integrity of data in the system. However, we do not guarantee that the data will be accurate, complete, or up-to-date.</p>
+     <h2>Limitation of Liability</h2>
+    <p>We will not be liable for any direct, indirect, incidental, special, consequential or punitive damages resulting from your use of, or inability to use, the system.</p>
+     <h2>Changes to the Terms</h2>
+    <p>We may modify these terms at any time. We will post any changes to these terms on this page.</p>
+     <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the jurisdiction in which the hospital is located.</p>
+     <h2>Contact Us</h2>
+   
+</body>
+</html>

@@ -1,12 +1,12 @@
 <div class="sidebar-background">
 
-	<div class="primary-sidebar-background" >
+	<div class="primary-sidebar-background">
 
 	</div>
 
 </div>
 
-<div class="primary-sidebar" style="background-color: #008080">
+<div class="primary-sidebar">
 
 	<!-- Main nav -->
 
@@ -16,7 +16,7 @@
 
     	<a href="<?php echo base_url();?>">
 
-        	<img src="<?php echo base_url();?>uploads/logo.png"  style="max-height:100px; max-width:100px;"/>
+        	<img src="<?php echo base_url();?>template/images/zone-1.png"  style="max-height:100px; max-width:100px;"/>
 
         </a>
 
@@ -34,13 +34,13 @@
 
 		<li class="<?php if($page_name == 'dashboard')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/dashboard" >
 
 					<i class="icon-desktop icon-2x"></i>
 
-					<span><?php echo get_phrase('dashboard');?></span>
+					<span>Dashboard</span>
 
 				</a>
 
@@ -52,13 +52,13 @@
 
 		<li class="<?php if($page_name == 'manage_department')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_department" >
 
 					<i class="icon-sitemap icon-2x"></i>
 
-					<span><?php echo get_phrase('department');?></span>
+					<span>Department</span>
 
 				</a>
 
@@ -70,13 +70,13 @@
 
 		<li class="<?php if($page_name == 'manage_doctor')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_doctor" >
 
 					<i class="icon-user-md icon-2x"></i>
 
-					<span><?php echo get_phrase('doctor');?></span>
+					<span>Doctor</span>
 
 				</a>
 
@@ -88,13 +88,13 @@
 
 		<li class="<?php if($page_name == 'manage_patient')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_patient" >
 
 					<i class="icon-user icon-2x"></i>
 
-					<span><?php echo get_phrase('patient');?></span>
+					<span>Patient</span>
 
 				</a>
 
@@ -106,13 +106,13 @@
 
 		<li class="<?php if($page_name == 'manage_nurse')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_nurse" >
 
 					<i class="icon-plus-sign-alt icon-2x"></i>
 
-					<span><?php echo get_phrase('nurse');?></span>
+					<span>Nurse</span>
 
 				</a>
 
@@ -124,13 +124,13 @@
 
 		<li class="<?php if($page_name == 'manage_pharmacist')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_pharmacist" >
 
 					<i class="icon-medkit icon-2x"></i>
 
-					<span><?php echo get_phrase('pharmacist');?></span>
+					<span>Pharmacist</span>
 
 				</a>
 
@@ -142,13 +142,13 @@
 
 		<li class="<?php if($page_name == 'manage_laboratorist')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_laboratorist" >
 
 					<i class="icon-beaker icon-2x"></i>
 
-					<span><?php echo get_phrase('laboratorist');?></span>
+					<span>Laboratorist</span>
 
 				</a>
 
@@ -160,13 +160,13 @@
 
 		<li class="<?php if($page_name == 'manage_accountant')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_accountant" >
 
 					<i class="icon-money icon-2x"></i>
 
-					<span><?php echo get_phrase('accountant');?></span>
+					<span>Accountant</span>
 
 				</a>
 
@@ -190,13 +190,13 @@
 
 										$page_name == 'view_report'  )echo 'active';?>">
 
-			<span class="glow"></span>
+			
 
             <a class="accordion-toggle  " data-toggle="collapse" href="#view_hospital_submenu" >
 
                 <i class="icon-screenshot icon-2x"></i>
 
-                <span><?php echo get_phrase('monitor_hospital');?><i class="icon-caret-down"></i></span>
+                <span>Monitor Hospital<i class="icon-caret-down"></i></span>
 
             </a>
 
@@ -223,15 +223,6 @@
                   </a>
 
                 </li>
-				<li class="<?php if($page_name == 'view_complains')echo 'active';?>">
-
-<a href="<?php echo base_url();?>index.php?admin/view_complains">
-
-<i class="icon-comment"></i><?php echo get_phrase('view_complains');?>
-
-</a>
-
-</li>
 
                 <li class="<?php if($page_name == 'view_payment')echo 'active';?>">
 
@@ -323,13 +314,13 @@
 
 										$page_name == 'backup_restore' )echo 'active';?>">
 
-			<span class="glow"></span>
+			
 
             <a class="accordion-toggle  " data-toggle="collapse" href="#settings_submenu" >
 
                 <i class="icon-wrench icon-2x"></i>
 
-                <span><?php echo get_phrase('settings');?><i class="icon-caret-down"></i></span>
+                <span>Settings<i class="icon-caret-down"></i></span>
 
             </a>
 
@@ -405,13 +396,13 @@
 
 		<li class="<?php if($page_name == 'manage_profile')echo 'dark-nav active';?>">
 
-			<span class="glow"></span>
+			
 
 				<a href="<?php echo base_url();?>index.php?admin/manage_profile" >
 
 					<i class="icon-lock icon-2x"></i>
 
-					<span><?php echo get_phrase('profile');?></span>
+					<span>Profile</span>
 
 				</a>
 

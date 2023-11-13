@@ -22,10 +22,10 @@
         
 	</div>
 	<div class="box-content padded">
-		<div class="tab-content">
+		<div class="tab-content" style="border-radius:20px">
         	<!----EDITING FORM STARTS---->
         	<?php if(isset($edit_profile)):?>
-			<div class="tab-pane box active" id="edit" style="padding: 5px">
+			<div class="tab-pane box active" id="edit" style="padding: 5px;border-radius:20px">
                 <div class="box-content">
                 	<?php foreach($edit_profile as $row):?>
                     <?php echo form_open('admin/manage_doctor/edit/do_update/'.$row['doctor_id'] , array('class' => 'form-horizontal validatable'));?>
@@ -101,7 +101,7 @@
 
             <!----TABLE LISTING STARTS--->
 
-            <div class="tab-pane box <?php if(!isset($edit_profile))echo 'active';?>" id="list">
+            <div class="tab-pane box <?php if(!isset($edit_profile))echo 'active';?>" id="list" style="border-radius:20px">
                 <table cellpadding="0" cellspacing="0" border="0" class="dTable responsive table-hover">
                 	<thead>
                 		<tr>
@@ -136,7 +136,7 @@
 
 			<!----CREATION FORM STARTS---->
 
-			<div class="tab-pane box" id="add" style="padding: 5px">
+			<div class="tab-pane box" id="add" style="padding: 5px" style="border-radius:20px">
                 <div class="box-content">
                     <?php echo form_open('admin/manage_doctor/create/' , array('class' => 'form-horizontal validatable'));?>
                         <div class="padded">

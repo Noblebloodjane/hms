@@ -1,6 +1,6 @@
-<div class="box">
+<div class="box" style="border-radius:20px">
 
-	<div class="box-header">
+	<div class="box-header" style="border-radius:20px">
 
     
 
@@ -25,12 +25,12 @@
     	<!-----i edited here-CONTROL TABS END------->
 </div>
 
-	<div class="box-content padded">
+	<div class="box-content padded" style="border-radius:20px">
 
-		<div class="tab-content">
+		<div class="tab-content" style="border-radius:20px">
 
         	<!----EDITING FORM STARTS---->
-        	<div class="tab-pane box active" id="edit" style="padding: 5px">
+        	<div class="tab-pane box active" id="edit" style="padding: 5px" style="border-radius:20px">
 
                 <div class="box-content">
 
@@ -90,7 +90,7 @@
 
             <!----TABLE LISTING STARTS--->
 
-            <div class="tab-pane box <?php if(!isset($edit_profile))echo 'active';?>" id="list">
+            <div class="tab-pane box <?php if(!isset($edit_profile))echo 'active';?>" id="list" style="border-radius:20px">
 
 				
 

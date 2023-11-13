@@ -206,6 +206,7 @@
 		</li>
 
 
+
 		<!------manage own profile--->
 
 		<li class="<?php if($page_name == 'manage_profile')echo 'dark-nav active';?>">

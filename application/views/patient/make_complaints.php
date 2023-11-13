@@ -51,8 +51,8 @@
     </div>
 
     <div>
-        <label for="complaint_text">Complaint Text:</label>
-        <textarea id="complaint_text" name="complaint_text" placeholder="Enter your complaint text"></textarea>
+        <label for="complaint_text">Complaint:</label>
+        <textarea id="complaint_text" name="complaint_text" placeholder="Enter your complaint"></textarea>
     </div>
 
     <!-- Add the hidden input fields to capture staff information -->

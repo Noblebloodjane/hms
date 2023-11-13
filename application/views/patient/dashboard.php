@@ -88,6 +88,7 @@
                 </div>
 
                 <div class="row-fluid">
+                    <!--complain-->
            
                     <div class="span2 action-nav-button">
 
@@ -95,7 +96,7 @@
 
 <i class="icon-comment"></i>
 
-<span><?php echo get_phrase('view_make_complains');?></span>
+<span><?php echo get_phrase('make_complains');?></span>
 
 </a>
 

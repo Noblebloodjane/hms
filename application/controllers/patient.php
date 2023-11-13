@@ -119,7 +119,50 @@ class Patient extends CI_Controller
 	}
 
 	
+	function request_appointment() {
+		// Check if the patient is logged in
+		if ($this->session->userdata('patient_login') != 1) {
+			// Redirect or handle the case where the patient is not logged in
+			// You can add your own logic here based on your requirements
+			// For example: redirect('login');
+		}
+	
+		if ($this->input->post('reason_submitted')) {
+			// Form submission, process the request
+	
+			// Assuming you have loaded the database library in your CodeIgniter configuration
+	
+			// Remove date slashes from the timestamp
+			$appointment_timestamp = str_replace('/', '', $this->input->post('appointment_timestamp'));
+	
+			$data = array(
+				'patient_id' => $this->session->userdata('patient_id'),
+				'Reason' => $this->input->post('reason_text'),
+				'appointment_timestamp' => $appointment_timestamp,
+			);
+	
+			// Insert data into the 'request_appointment' table
+			$this->db->insert('request_app', $data);
+	
 
+		}
+		// Set page data
+		$page_data['page_name']    = 'view_appointment';
+
+		$page_data['page_title']   = get_phrase('view_appointment');
+
+		$page_data['appointments'] = $this->db->get_where('appointment', array(
+
+			'patient_id' => $this->session->userdata('patient_id')
+
+		))->result_array();
+
+		$this->load->view('index', $page_data);
+
+
+	}
+	
+	
 	
 
 	/***MANAGE PRESCRIPTIONS******/
@@ -247,115 +290,6 @@ class Patient extends CI_Controller
 	{
 
 		//if($this->session->userdata('patient_login')!=1)redirect(base_url().'index.php?login' , 'refresh');
-
-		if ($param1 == 'make_payment') {
-
-			$invoice_id      = $this->input->post('invoice_id');
-
-			$system_settings = $this->db->get_where('settings', array(
-
-				'type' => 'paypal_email'
-
-			))->row();
-
-			$invoice_details = $this->db->get_where('invoice', array(
-
-				'invoice_id' => $invoice_id
-
-			))->row();
-
-			
-
-			/****TRANSFERRING USER TO PAYPAL TERMINAL****/
-
-			$this->paypal->add_field('rm', 2);
-
-			$this->paypal->add_field('no_note', 0);
-
-			$this->paypal->add_field('item_name', $invoice_details->title);
-
-			$this->paypal->add_field('amount', $invoice_details->amount);
-
-			$this->paypal->add_field('custom', $invoice_details->invoice_id);
-
-			$this->paypal->add_field('business', $system_settings->description);
-
-			$this->paypal->add_field('notify_url', base_url() . 'index.php?patient/view_invoice/paypal_ipn');
-
-			$this->paypal->add_field('cancel_return', base_url() . 'index.php?patient/view_invoice/paypal_cancel');
-
-			$this->paypal->add_field('return', base_url() . 'index.php?patient/view_invoice/paypal_success');
-
-			
-
-			$this->paypal->submit_paypal_post();
-
-			// submit the fields to paypal
-
-		}
-
-		if ($param1 == 'paypal_ipn') {
-
-			if ($this->paypal->validate_ipn() == true) {
-
-				$ipn_response = '';
-
-				foreach ($_POST as $key => $value) {
-
-					$value = urlencode(stripslashes($value));
-
-					$ipn_response .= "\n$key=$value";
-
-				}
-
-				$invoice_id     = $_POST['custom'];
-
-				$data['status'] = 'paid';
-
-				$this->db->where('invoice_id', $invoice_id);
-
-				$this->db->update('invoice', $data);
-
-				
-
-				$data2['transaction_id'] = rand(10000, 100000);
-
-				$data2['invoice_id']     = $invoice_id;
-
-				$data2['patient_id']     = $this->crud_model->get_type_name_by_id('invoice', $invoice_id, 'patient_id');
-
-				$data2['payment_method'] = 'paypal';
-
-				$data2['description']    = $ipn_response;
-
-				$data2['amount']         = $this->crud_model->get_type_name_by_id('invoice', $invoice_id, 'amount');
-
-				$data2['timestamp']      = strtotime(date("m/d/Y"));
-
-				
-
-				$this->db->insert('payment', $data2);
-
-			}
-
-		}
-
-		if ($param1 == 'paypal_cancel') {
-
-			$this->session->set_flashdata('flash_message', get_phrase('payment_cancelled'));
-
-			redirect(base_url() . 'index.php?patient/view_invoice/', 'refresh');
-
-		}
-
-		if ($param1 == 'paypal_success') {
-
-			$this->session->set_flashdata('flash_message', get_phrase('payment_successfull'));
-
-			redirect(base_url() . 'index.php?patient/view_invoice/', 'refresh');
-
-		}
-
 		
 
 		$page_data['page_name']  = 'view_invoice';
@@ -372,7 +306,19 @@ class Patient extends CI_Controller
 
 	}
 
-	
+	public function make_payment()
+{
+    $invoice_id = $this->input->post('invoice_id');
+
+    $this->db->where('invoice_id', $invoice_id);
+    $data['status'] = 'paid';
+    $this->db->update('invoice', $data);
+
+
+    // Respond with a success message if needed
+    echo 'Payment status updated successfully!';
+}
+
 
 
 	/******VIEW COMPLETED PAYMENT HISTORY*****/

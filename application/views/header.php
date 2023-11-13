@@ -1,8 +1,8 @@
-<div class="navbar navbar-top navbar-inverse">
+<div class="navbar navbar-top navbar-inverse" style="margin-left:300px">
 
-	<div class="navbar-inner" style="background-color: #008080;border-bottom: 1px solid darkblue;">
+	<div class="navbar-inner" style="background-color: #079c1c;border-bottom: 1px solid darkblue;">
 
-		<div class="container-fluid"style="background-color: #008080 >
+		<div class="container-fluid"style="background-color: #079c1c >
 
 			<a class="brand" href="<?php echo base_url();?>"><?php echo $system_name;?>
 
@@ -10,7 +10,7 @@
 
 			<!-- the new toggle buttons -->
 
-			<ul class="nav pull-right" style="background-color: #008080>
+			<ul class="nav pull-right" style="background-color: #079c1c>
 
 				<li class="toggle-primary-sidebar hidden-desktop" data-toggle="collapse" data-target=".nav-collapse-primary"><button type="button" class="btn btn-navbar"><i class="icon-th-list"></i></button></li>
 
@@ -23,8 +23,10 @@
 				<ul class="nav pull-right">
 
 					<li class="dropdown">
-
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo get_phrase('account');?> <b class="caret"></b></a>
+					
+					    <a href="#"   data-toggle="dropdown" style="border-radius: 50%;height: 30px; width: 20px; text-align: center"><i class="icon-user icon-userss" style="padding: 5px 0px 0px 0px; font-size: 20px"></i> </a>
+					
+					
 
 					<!-- Account Selector -->
 
@@ -68,69 +70,8 @@
 
 				</ul>
 
-				<ul class="nav pull-right">
-
-					<li class="dropdown">
-
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo get_phrase('select_language');?><b class="caret"></b></a>
-
-					<!-- Language Selector -->
-
-                        <ul class="dropdown-menu">
-
-                            <?php
-
-                            $fields = $this->db->list_fields('language');
-
-                            foreach ($fields as $field)
-
-                            {
-
-                                if($field == 'phrase_id' || $field == 'phrase')continue;
-
-                                ?>
-
-                                    <li>
-
-                                        <a href="<?php echo base_url();?>index.php?multilanguage/select_language/<?php echo $field;?>">
-
-                                            <?php echo $field;?>
-
-                                            <?php //selecting current language
-
-                                                if($this->session->userdata('current_language') == $field):?>
-
-                                                    <i class="icon-ok"></i>
-
-                                            <?php endif;?>
-
-                                        </a>
-
-                                    </li>
-
-                                <?php
-
-                            }
-
-                            ?>
-
-                        </ul>
-
-                	<!-- Language Selector -->
-
-					</li>
-
-				</ul>
-
-                <ul class="nav pull-right">
-
-					<li class="dropdown">
-
-					<a href="#" ><i class="icon-user"></i><?php echo get_phrase($this->session->userdata('login_type')).' '.get_phrase('panel');?> </a>
-
-					</li>
-
-				</ul>
+				
+        
 
 			</div>
 

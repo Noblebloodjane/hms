@@ -35,79 +35,9 @@
 
         <?php endif;?>
 
-        <div class="navbar navbar-top navbar-inverse ">
+        
 
-            <div class="navbar-inner" style="background-color: #008080;border-bottom: 1px solid dark blue;">
-
-                <div class="container-fluid">
-
-                    <a class="brand" href="<?php echo base_url();?>"><?php echo $system_name;?></a>
-
-                    
-
-                    <ul class="nav pull-right">
-
-                        <li class="dropdown">
-
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select Language <b class="caret"></b></a>
-
-                        <!-- Language Selector -->
-
-                            <ul class="dropdown-menu">
-
-                                <?php
-
-                                $fields = $this->db->list_fields('language');
-
-                                foreach ($fields as $field)
-
-                                {
-
-                                    if($field == 'phrase_id' || $field == 'phrase')continue;
-
-                                    ?>
-
-                                        <li>
-
-                                            <a href="<?php echo base_url();?>index.php?multilanguage/select_language/<?php echo $field;?>">
-
-                                                <?php echo $field;?>
-
-                                                <?php //selecting current language
-
-                                                    if($this->session->userdata('current_language') == $field):?>
-
-                                                        <i class="icon-ok"></i>
-
-                                                <?php endif;?>
-
-                                            </a>
-
-                                        </li>
-
-                                    <?php
-
-                                }
-
-                                ?>
-
-                            </ul>
-
-                        <!-- Language Selector -->
-
-                        </li>
-
-                    </ul>
-
-                    
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="container">
+        <div class="container" style="margin-top: 20px">
 
             <div class="span4 offset4">
 
@@ -115,15 +45,16 @@
 
                     <center>
 
-                        <img src="<?php echo base_url();?>uploads/logo.png" style="height:200px;" />
+                            <img src="template/images/zone.jpg" alt="Hospital Management System Image" class="hms-img">
 
                     </center>
+                    
 
                     <div class="login box" style="margin-top: 10px;">
 
-                        <div class="box-header">
+                        <div class="log-heading">
 
-                            <span class="title"><?php echo get_phrase('login');?></span>
+                            <span class="title">Login</span>
 
                         </div>
 
@@ -137,7 +68,7 @@
 
                                     
 
-                                    <select class="validate[required]" name="login_type" style="width:100%;">
+                                    <select class="validate[required]" name="login_type" style="width:100%; border-radius: 20px;">
 
                                         <option value=""><?php echo get_phrase('account_type');?></option>
 
@@ -161,35 +92,35 @@
 
                                 </div>
 
-                                <div class="input-prepend">
+                                <div class="input-prepend" >
 
-                                    <span class="add-on" href="#">
+                                    <span class="add-on" href="#" style="border-radius: 20px;">
 
                                     <i class="icon-envelope"></i>
 
                                     </span>
 
-                                    <input name="email" type="text" placeholder="<?php echo get_phrase('email');?>">
+                                    <input name="email" type="text" placeholder="<?php echo get_phrase('email');?>" style="border-radius: 20px;">
 
                                 </div>
 
-                                <div class="input-prepend">
+                                <div class="input-prepend" >
 
-                                    <span class="add-on" href="#">
+                                    <span class="add-on" href="#" style="border-radius: 20px;">
 
                                     <i class="icon-key"></i>
 
                                     </span>
 
-                                    <input name="password" type="password" placeholder="<?php echo get_phrase('password');?>">
+                                    <input name="password" type="password" placeholder="<?php echo get_phrase('password');?> " style="border-radius: 20px;">
 
                                 </div>
 
                                 <div>
 
-                                    <button type="submit" class="btn btn-blue btn-block"style="background-color: #008080;border: solid #008080" >
+                                    <button type="submit" class="btn btn-blue btn-block"style="background-color: #079c1c;border: solid #079c1c; border-radius:20px;" >
 
-                                        <?php echo get_phrase('login');?>
+                                        <span style="font-size: 12px"><?php echo get_phrase('login');?></span>
 
                                     </button>
 
@@ -211,7 +142,7 @@
 
                     </div>
 
-                    <?php include 'application/views/footer.php';?>
+                    
 
                 </div>
 
@@ -225,21 +156,21 @@
 
         <!-----------password reset form ------>
 
-        <div id="modal-simple" class="modal hide fade">
+        <div id="modal-simple" class="modal hide fade" style="border-radius: 20px" >
 
-          <div class="modal-header">
+          <div class="modal-header" style="border-radius: 20px">
 
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-            <h6 id="modal-tablesLabel"><?php echo get_phrase('reset_password');?></h6>
+            <h4 id="modal-tablesLabel" style="color: #079c1c">Reset Password</h4>
 
           </div>
 
-          <div class="modal-body">
+          <div class="modal-body" style="border-radius: 20px">
 
             <?php echo form_open('login/reset_password');?>
 
-            	<select class="validate[required]" name="account_type"  style="margin-bottom: 0px !important;">
+            	<select class="validate[required]" name="account_type"  style="margin-bottom: 0px !important; border-radius: 20px;padding-right: 10px;padding-left: 10px;">
 
                     <option value=""><?php echo get_phrase('account_type');?></option>
 
@@ -259,17 +190,17 @@
 
                 </select>
 
-                <input type="email" name="email"  placeholder="<?php echo get_phrase('email');?>"  style="margin-bottom: 0px !important;"/>
+                <input type="email" name="email"  placeholder="<?php echo get_phrase('email');?>"  style="margin-bottom: 0px !important; border-radius: 20px; padding-right: 10px;padding-left: 10px;"/>
 
-                <input type="submit" value="<?php echo get_phrase('reset');?>"  class="btn btn-blue btn-medium"/>
+                <input type="submit" value="<?php echo get_phrase('reset');?>"  class="btn btn-blue btn-medium" style="background-color:#079c1c;border: 1px solid #079c1c; border-radius: 20px"/>
 
             <?php echo form_close();?>
 
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer" style="border-radius: 20px">
 
-            <button class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-default" style="border-radius: 20px" data-dismiss="modal">Close</button>
 
           </div>
 

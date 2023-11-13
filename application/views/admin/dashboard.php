@@ -12,9 +12,9 @@
 
                 <div class="row-fluid">
 
-                    <div class="span2 action-nav-button">
+                    <div class="span2 action-nav-button dash">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_doctor">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_doctor" style="border-radius:10px">
 
                         <i class="icon-user-md"></i>
 
@@ -26,7 +26,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_patient">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_patient" style="border-radius:10px">
 
                         <i class="icon-user"></i>
 
@@ -38,7 +38,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_nurse">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_nurse" style="border-radius:10px">
 
                         <i class="icon-plus-sign-alt"></i>
 
@@ -50,7 +50,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_pharmacist">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_pharmacist" style="border-radius:10px">
 
                         <i class="icon-medkit"></i>
 
@@ -62,7 +62,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_laboratorist">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_laboratorist" style="border-radius:10px">
 
                         <i class="icon-beaker"></i>
 
@@ -74,7 +74,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_accountant">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_accountant" style="border-radius:10px">
 
                         <i class="icon-money"></i>
 
@@ -90,7 +90,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_appointment">
+                        <a href="<?php echo base_url();?>index.php?admin/view_appointment" style="border-radius:10px">
 
                         <i class="icon-exchange"></i>
 
@@ -102,7 +102,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_payment">
+                        <a href="<?php echo base_url();?>index.php?admin/view_payment" style="border-radius:10px">
 
                         <i class="icon-credit-card"></i>
 
@@ -114,7 +114,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_blood_bank">
+                        <a href="<?php echo base_url();?>index.php?admin/view_blood_bank" style="border-radius:10px">
 
                         <i class="icon-tint"></i>
 
@@ -126,7 +126,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_medicine">
+                        <a href="<?php echo base_url();?>index.php?admin/view_medicine" style="border-radius:10px">
 
                         <i class="icon-medkit"></i>
 
@@ -138,7 +138,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_report/operation">
+                        <a href="<?php echo base_url();?>index.php?admin/view_report/operation" style="border-radius:10px">
 
                         <i class="icon-reorder"></i>
 
@@ -150,7 +150,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_report/birth">
+                        <a href="<?php echo base_url();?>index.php?admin/view_report/birth" style="border-radius:10px">
 
                         <i class="icon-github-alt"></i>
 
@@ -166,7 +166,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_report/death">
+                        <a href="<?php echo base_url();?>index.php?admin/view_report/death"style="border-radius:10px">
 
                         <i class="icon-minus-sign"></i>
 
@@ -178,7 +178,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_bed_status">
+                        <a href="<?php echo base_url();?>index.php?admin/view_bed_status" style="border-radius:10px">
 
                         <i class="icon-hdd"></i>
 
@@ -190,7 +190,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_noticeboard">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_noticeboard" style="border-radius:10px">
 
                         <i class="icon-columns"></i>
 
@@ -202,7 +202,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/system_settings">
+                        <a href="<?php echo base_url();?>index.php?admin/system_settings" style="border-radius:10px">
 
                         <i class="icon-h-sign"></i>
 
@@ -214,7 +214,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/manage_language">
+                        <a href="<?php echo base_url();?>index.php?admin/manage_language" style="border-radius:10px">
 
                         <i class="icon-globe"></i>
 
@@ -226,7 +226,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/backup_restore">
+                        <a href="<?php echo base_url();?>index.php?admin/backup_restore" style="border-radius:10px">
 
                         <i class="icon-download-alt"></i>
 
@@ -243,7 +243,7 @@
 
                     <div class="span2 action-nav-button">
 
-                        <a href="<?php echo base_url();?>index.php?admin/view_complains">
+                        <a href="<?php echo base_url();?>index.php?admin/view_complains" style="border-radius:10px">
 
                         <i class="icon-comment"></i>
 
@@ -263,17 +263,17 @@
 
     <hr />
 
-    <div class="row-fluid">
+    <div class="row-fluid" >
 
     
 
     	<!-----CALENDAR SCHEDULE STARTS-->
 
-        <div class="span6">
+        <div class="span6" style="border-radius:10px">
 
-            <div class="box">
+            <div class="box" style="border-radius:10px">
 
-                <div class="box-header">
+                <div class="box-header" style="border-top-right-radius:10px; border-top-left-radius:10px">
 
                     <div class="title">
 
@@ -303,9 +303,9 @@
 
         <div class="span6">
 
-            <div class="box">
+            <div class="box" style="border-radius:10px">
 
-                <div class="box-header">
+                <div class="box-header" style="border-radius:10px">
 
                     <span class="title">
 
